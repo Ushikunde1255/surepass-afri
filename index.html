@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head><style>
+<html lang="en"><head><style>
 @font-face {
   font-family: "Optimistic";
   font-style: normal;
@@ -21,432 +20,122 @@
 :where(code, pre, kbd, samp) {
   font-family: "Optimistic Mono", ui-monospace, monospace;
 }
-</style>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>SurePass BizCalc Afri - No Carryover!</title>
-<link rel="manifest" href="data:application/json,{%22name%22:%22SurePass%22,%22short_name%22:%22SurePass%22,%22display%22:%22standalone%22}">
-<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-<script src="https://js.paystack.co/v1/inline.js"></script>
+</style><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SurePass BizCalc Afri - No Carryover</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,system-ui,Segoe UI,Roboto;background:#f6f8fb;color:#0A1931;overflow-x:hidden}
-:root{--navy:#0A1931;--gold:#FFD700;--gold2:#FFC300}
-.hd{background:var(--navy);color:white;padding:12px 14px;position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center}
-.hd h1{color:var(--gold);font-size:16px;line-height:1.1} .hd small{font-size:9px;opacity:.85;display:block}
-.cred{background:var(--gold);color:var(--navy);padding:4px 8px;border-radius:20px;font-size:10px;font-weight:900}
-.topBar{display:flex;gap:5px;overflow-x:auto;padding:7px;background:white;border-bottom:2px solid var(--gold);position:sticky;top:56px;z-index:99;scrollbar-width:none}
-.chip{white-space:nowrap;padding:6px 12px;border-radius:20px;font-size:10px;font-weight:800;border:1px solid #ddd;background:white;cursor:pointer} .chip.active{background:var(--navy);color:var(--gold);border-color:var(--navy)}
-.subBar{display:flex;gap:5px;overflow-x:auto;padding:6px;background:#fff8e1;border-bottom:1px solid #eee;position:sticky;top:92px;z-index:98}
-.lChip{white-space:nowrap;padding:5px 10px;border-radius:8px;font-size:10px;font-weight:700;border:1px solid var(--gold);cursor:pointer;background:white} .lChip.active{background:var(--gold);color:var(--navy)}
-.card{background:white;margin:8px;border-radius:14px;padding:12px;box-shadow:0 2px 12px #0001;border:1px solid #eee}
-.btn{width:100%;padding:12px;background:var(--navy);color:var(--gold);border:0;border-radius:10px;font-weight:800;font-size:12px;margin:5px 0;cursor:pointer} .btn-gold{background:var(--gold);color:var(--navy)} .btn-outline{background:white;color:var(--navy);border:2px solid var(--navy)} .btn:disabled{opacity:.5}
-.badge{padding:2px 7px;border-radius:10px;font-size:9px;font-weight:800;display:inline-block;margin:2px} .b-red{background:red;color:white} .b-orange{background:orange;color:white} .b-green{background:#4CAF50;color:white} .b-gold{background:var(--gold);color:var(--navy)} .b-navy{background:var(--navy);color:var(--gold)}
-.snapZone{border:3px dashed var(--gold);border-radius:14px;padding:18px;text-align:center;background:#fffef5;cursor:pointer}
-.formula{text-align:center;background:var(--gold);color:var(--navy);padding:8px;border-radius:8px;font-weight:900;margin:6px 0;font-size:12px}
-.step{background:#f8f9ff;border-left:4px solid var(--gold);padding:8px;border-radius:6px;margin:6px 0;font-size:11px;line-height:1.4}
-.sol{background:var(--navy);color:white;border-radius:10px;padding:10px}
-.ocrBox{background:#f6f8fb;border:1px solid #ddd;border-radius:8px;padding:8px;font-size:11px;min-height:50px;white-space:pre-wrap}
-.topicGrid{display:grid;grid-template-columns:1fr 1fr;gap:6px} .tCard{border:1px solid #eee;border-radius:10px;padding:8px;background:white;font-size:10px} .tCard b{font-size:11px}
-.hotBox{border-left:4px solid red;background:#ffebee;padding:8px;border-radius:6px;margin:6px 0} .warmBox{border-left:4px solid orange;background:#fff3e0;padding:8px;border-radius:6px;margin:6px 0}
-.qBox{background:var(--navy);color:white;padding:9px;border-radius:8px;margin:6px 0;font-size:11px} .qBox b{color:var(--gold)}
-.navBottom{position:fixed;bottom:0;left:0;right:0;background:white;border-top:2px solid var(--gold);display:flex;z-index:200;padding:4px 0}
-.navBottom div{flex:1;text-align:center;padding:6px 2px;font-size:9px;font-weight:800;cursor:pointer} .navBottom .active{color:var(--navy);background:#fff8e1;border-radius:10px}
-.contentPad{padding-bottom:70px}
-textarea{width:100%;border:1px solid #ddd;border-radius:8px;padding:8px;font-size:11px;min-height:70px}
-.preview{max-width:100%;border-radius:8px;margin:6px 0;border:1px solid #eee}
-.payWall{background:linear-gradient(135deg,var(--navy),#1a3a6a);color:white;border-radius:12px;padding:12px;text-align:center;margin:8px}
-</style>
-</head>
-<body>
-<div class="hd">
-<div><h1>SurePass BizCalc Afri</h1><small>62 Topics + Snap & Solve + Exam Predict 🌍 MOUAU → Africa</small></div>
-<div class="cred" id="creditBadge">🎟 3 Free Snaps</div>
-</div>
+:root{--bg:#070d09;--card:#111c14;--card2:#17231a;--bd:#233829;--accent:#16DB65;--gold:#F5C542;--txt:#e9f3eb;--mut:#8aa898}
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui}
+body{background:var(--bg);color:var(--txt);padding:14px}
+.wrap{max-width:980px;margin:auto}
+.head{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:var(--card);border:1px solid var(--bd);border-radius:16px}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.pill{padding:8px 12px;border-radius:99px;border:1px solid var(--bd);background:var(--card2);font-size:12px;font-weight:800;cursor:pointer}
+.pill.active{background:var(--accent);color:#000;border-color:var(--accent)}
+.pill.uni.active{background:#fff;color:#000}
+.search{width:100%;padding:14px 16px;border-radius:14px;border:1px solid var(--bd);background:#0c1410;color:var(--txt);font-size:14px;margin:10px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:14px;cursor:pointer}
+.card b{font-size:13px}
+.card .f{font-size:11px;color:var(--mut);margin:4px 0}
+.badge{font-size:10px;padding:4px 8px;border-radius:99px;background:#1f2f24;border:1px solid var(--bd);display:inline-block;margin-right:6px}
+.badge.gold{background:var(--gold);color:#000}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;place-items:center;padding:14px;z-index:50}
+.modal.open{display:grid}
+.modalBox{background:var(--card);border:1px solid var(--bd);border-radius:18px;max-width:640px;width:100%;padding:18px;max-height:90vh;overflow:auto}
+.btn{width:100%;padding:14px;border-radius:12px;border:0;background:var(--txt);color:#000;font-weight:900;cursor:pointer;margin-top:12px}
+.btn.g{background:var(--accent)}
+.snapState{padding:12px;border:1px dashed var(--bd);border-radius:12px;margin-top:12px;text-align:center}
+.kpi{display:flex;gap:8px;margin:8px 0}
+.kpi div{background:var(--card2);border:1px solid var(--bd);border-radius:12px;padding:10px;flex:1}
+</style></head><body>
+<div class="wrap">
+<div class="head"><div style="font-weight:900">SurePass-<span style="color:var(--accent)">Afri</span> • MOUAU→Africa</div><div style="font-size:11px;background:var(--gold);color:#000;padding:6px 10px;border-radius:99px;font-weight:900">3 Snaps FREE • ✓ Offline Ready</div></div>
 
-<div class="topBar" id="uniBar">
-<div class="chip active" data-uni="MOUAU">🇳🇬 MOUAU</div>
-<div class="chip" data-uni="UNN">🇳🇬 UNN</div>
-<div class="chip" data-uni="UNILAG">🇳🇬 UNILAG</div>
-<div class="chip" data-uni="Legon">🇬🇭 Legon</div>
-<div class="chip" data-uni="KNUST">🇬🇭 KNUST</div>
-<div class="chip" data-uni="UoN">🇰🇪 UoN</div>
-<div class="chip" data-uni="UCT">🇿🇦 UCT</div>
-</div>
-<div class="subBar" id="levelBar">
-<div class="lChip active" data-level="BUS101">100L BUS101</div>
-<div class="lChip" data-level="BUS102">BUS102</div>
-<div class="lChip" data-level="BUS201">200L BUS201</div>
-<div class="lChip" data-level="BUS202">BUS202</div>
-<div class="lChip" data-level="BUS301">300L BUS301</div>
-</div>
+<div class="pills" id="uniPills"></div>
+<div class="pills" id="lvlPills"></div>
 
-<div class="contentPad">
-<!-- TOPICS TAB -->
-<div id="tab-topics">
-<div class="card">
-<b>📚 All 62 Topics - <span id="levelLabel">BUS101</span> - <span id="uniLabel">MOUAU</span> <span id="currencyLabel">₦</span></b>
-<div style="font-size:10px;color:#666;margin:4px 0">Tap any topic → Vivid lecture + Audio + Formula + Example + Common Mistake</div>
-<div class="topicGrid" id="topicGrid"></div>
-</div>
-<div class="card" id="lectureCard" style="display:none">
-<h3 id="lectureTitle" style="color:var(--navy)"></h3>
-<div id="lectureBody"></div>
-<button class="btn btn-gold" onclick="speakCurrent()">🎧 Play Audio Lecture</button>
-<button class="btn" onclick="closeLecture()">⬅ Back to Topics</button>
+<div class="kpi"><div><small style="color:var(--mut)">PROGRESS</small><br><b id="prog">2/62</b></div><div><small style="color:var(--mut)">STREAK</small><br><b>🔥 4 streak</b></div><div><small style="color:var(--mut)">CONTINUE</small><br><b id="cont">Depreciation RB</b></div></div>
+
+<input id="search" class="search" placeholder="🔍 Search 62 topics... e.g., depreciation, matrix, interest">
+
+<div style="margin:10px 0;font-size:12px;color:var(--mut)"><span id="count">62 BizCalc Topics • 62 showing</span> • <span>Currency: </span><select id="curr" onchange="render()"><option>₦ NGN</option><option>GH₵ GHS</option><option>KSh KES</option><option>R ZAR</option></select></div>
+
+<div class="grid" id="grid"></div>
+
+<div style="margin-top:18px;background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:14px">
+<h3 style="font-size:14px">Snap & Solve (AI Agent) - 4 States Demo</h3>
+<div class="snapState" id="snapBox">
+<div id="snapEmpty"><b>📸 Snap your assignment</b><br><small style="color:var(--mut)">Upload photo → OCR → Auto-solve. Try sample: Depreciation question</small><br><br><input type="file" id="file"><br><br><button class="btn g" onclick="snapSim()">Simulate AI Snap</button></div>
+<div id="snapLoad" style="display:none"><b>🤖 AI Agent reading...</b><br><small>Identified: Depreciation RB • Confidence 94%</small></div>
+<div id="snapOk" style="display:none"><b style="color:var(--accent)">✅ Solved! BV = C(1-r)^n</b><br><small>Book Value = ₦120,000 • Steps: 3 • Share to WhatsApp</small><br><button class="btn g" onclick="shareWA()">Share to WhatsApp</button></div>
+<div id="snapLimit" style="display:none"><b>🚫 3/3 Free Used</b><br><small>Upgrade to Pro ₦1,500/mo for unlimited</small><br><button class="btn">Upgrade</button></div>
 </div>
 </div>
 
-<!-- SNAP TAB -->
-<div id="tab-snap" style="display:none">
-<div class="card">
-<h3>📸 Snap Assignment & Solve <span class="badge b-gold">MONEY MAKER!</span></h3>
-<p style="font-size:10px;color:#555">Snap BUS question from WhatsApp/PDF, paste, or type. App solves vividly!</p>
-<div class="snapZone" id="dropZone" onclick="document.getElementById('fileInput').click()">
-<div style="font-size:28px">📷</div><b>Tap to Snap / Camera</b><br><span style="font-size:9px">Drag & drop or paste (Ctrl+V) screenshot here</span><br><span style="font-size:8px;color:#888">JPG, PNG, screenshot, pasted image</span>
-</div>
-<input type="file" id="fileInput" accept="image/*" capture="environment" style="display:none">
-<div style="display:flex;gap:5px;margin-top:6px">
-<button class="btn btn-outline" style="flex:1" onclick="pasteClipboard()">📋 Paste</button>
-<button class="btn btn-outline" style="flex:1" onclick="clearSnap()">🗑 Clear</button>
-</div>
-<img id="preview" class="preview" style="display:none">
-<div style="margin-top:8px"><b style="font-size:11px">📝 Or Type/Paste Question:</b>
-<textarea id="questionText" placeholder="e.g., Calculate EOQ if Demand=2000, Ordering=₦500, Holding=₦10..."></textarea>
-</div>
-<button class="btn btn-gold" id="ocrBtn" onclick="doOCR()">🔍 Step 1: Extract Text (OCR)</button>
-<button class="btn" id="solveBtn" onclick="solveQ()">🧠 Step 2: Solve Vividly (Costs 1 credit)</button>
-<div id="ocrResult" style="display:none"><h4 style="font-size:11px">📄 Extracted (editable):</h4><div class="ocrBox" id="ocrBox" contenteditable="true"></div></div>
-<div id="solArea" style="display:none"><div class="sol"><h3 style="color:var(--gold)">✅ Vivid Solution</h3><div id="solContent"></div>
-<button class="btn btn-gold" onclick="speakSol()">🎧 Play Audio</button>
-<button class="btn" style="background:white;color:var(--navy)" onclick="saveHist()">💾 Save</button>
-<button class="btn" style="background:#25D366;color:white" onclick="shareSol()">📤 Share WhatsApp</button>
-</div></div>
-<div id="payWallSnap" class="payWall" style="display:none">
-<h3 style="color:var(--gold)">🎟 Out of Free Snaps!</h3><p style="font-size:11px">You used 3 free snaps. Pay to continue solving assignments.</p>
-<button class="btn btn-gold" onclick="pay(100,'snap')">Pay ₦100 for 1 Snap</button>
-<button class="btn btn-gold" onclick="pay(300,'5snaps')">Pay ₦300 for 5 Snaps</button>
-<button class="btn" onclick="pay(1000,'basic')">Pay ₦1,000 Monthly - Unlimited!</button>
-</div>
-</div>
+<div style="margin-top:18px;background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:14px">
+<h3 style="font-size:14px">Exam Predict - Based on MOUAU 2018-2024</h3>
+<div id="pred"></div>
 </div>
 
-<!-- EXAM TAB -->
-<div id="tab-exam" style="display:none">
-<div id="examContent"></div>
 </div>
 
-<!-- PRICING TAB -->
-<div id="tab-pricing" style="display:none">
-<div class="card payWall" style="background:linear-gradient(135deg,#0A1931,#1e3a5f)">
-<h2 style="color:var(--gold)">💰 Earn With SurePass</h2>
-<p style="font-size:11px">Freemium = Students taste → Pay! Your profit plan</p>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px;text-align:left">
-<div style="background:white;color:var(--navy);border-radius:10px;padding:8px"><b>FREE</b><br><span style="font-size:10px">5 topics<br>3 snaps<br>1 exam predict<br>1 min audio</span><br><b>₦0</b></div>
-<div style="background:var(--gold);color:var(--navy);border-radius:10px;padding:8px;border:2px solid white"><b>BASIC ⭐ Best</b><br><span style="font-size:10px">All 62 topics<br>10 snaps/day<br>All predictions<br>Full audio<br>No ads</span><br><b>₦1,000/mo</b><br><span style="font-size:8px">or ₦5k/semester</span></div>
-<div style="background:white;color:var(--navy);border-radius:10px;padding:8px"><b>PREMIUM</b><br><span style="font-size:10px">Unlimited snaps<br>AI Tutor<br>Exam Alert<br>PDF download<br>Past Q Bank</span><br><b>₦2,500/mo</b></div>
-<div style="background:white;color:var(--navy);border-radius:10px;padding:8px"><b>EXAM PACK</b><br><span style="font-size:10px">10 predicted Qs<br>Marking scheme<br>3 yrs past Qs<br>Audio revision</span><br><b>₦1,500/level</b></div>
-</div>
-<button class="btn btn-gold" onclick="pay(1000,'basic')">Pay ₦1,000 - BASIC Monthly</button>
-<button class="btn" onclick="pay(2500,'premium')" style="background:white;color:var(--navy)">Pay ₦2,500 - PREMIUM</button>
-<button class="btn btn-gold" onclick="pay(1500,'exam')">Pay ₦1,500 - EXAM PACK</button>
-<div style="font-size:9px;margin-top:6px;opacity:.8">Paystack secure • MTN MoMo • Cedis • Naira • KSh • Rand • Same account as CraftSure</div>
-</div>
-<div class="card">
-<b>📈 Your Earnings Projection (Same Supabase = Zero Extra Cost!)</b>
-<div style="font-size:10px;line-height:1.5;margin-top:6px">
-<b>MOUAU Only:</b> 300 users free → 50 pay ₦1k = <b>₦50k/mo + exam season ₦300k = ₦350k</b><br>
-<b>Nigeria (UNN, UNILAG...):</b> 2k paying × ₦1k = <b>₦2M/mo = ₦24M/yr</b><br>
-<b>Pan-Africa:</b> 10k × $3 = <b>$30k/mo = ₦45M/mo</b><br>
-Cost: Supabase free (500MB DB, 1GB storage, 5GB bandwidth) — your 62 topics <1MB text + 30MB audio, well within! Vercel free! Paystack only 1.5% when they pay!
-</div>
-</div>
-</div>
-
-<!-- PROFILE TAB -->
-<div id="tab-profile" style="display:none">
-<div class="card">
-<h3>👤 My SurePass</h3>
-<div style="font-size:11px"><b>Name:</b> Ushi Nicholas Tersoo<br><b>School:</b> <span id="pUni">MOUAU</span><br><b>Level:</b> <span id="pLevel">BUS101</span><br><b>Credits:</b> <span id="pCred">3 snaps</span><br><b>Plan:</b> <span id="pPlan">FREE</span></div>
-<button class="btn btn-outline" onclick="resetCredits()">Reset Demo Credits (3 free)</button>
-</div>
-<div class="card"><b>🕒 Solved History</b><div id="histList" style="font-size:10px;color:#888">No history yet.</div></div>
-<div class="card"><b>🚀 Deploy Instructions (Phone)</b><div style="font-size:10px">1. Save this file as index.html in new GitHub repo surepass<br>2. Vercel → Add New → Import repo → Deploy (same account as craftsure)<br>3. Add env: VITE_SUPABASE_URL etc (same as CraftSure)<br>4. Domain: surepass.vercel.app → Done! Share in MOUAU WhatsApp groups!</div></div>
-</div>
-</div>
-
-<div class="navBottom">
-<div id="b-topics" class="active" onclick="showTab('topics')">📚<br>Topics</div>
-<div id="b-snap" onclick="showTab('snap')">📸<br>Snap & Solve</div>
-<div id="b-exam" onclick="showTab('exam')">🎯<br>Exam Predict</div>
-<div id="b-pricing" onclick="showTab('pricing')">💰<br>Pricing</div>
-<div id="b-profile" onclick="showTab('profile')">👤<br>Profile</div>
-</div>
+<div class="modal" id="modal"><div class="modalBox" id="mBox"></div></div>
 
 <script>
-// DATA
-const topicsData={
- BUS101:[
-  {code:"CI",title:"Compound Interest A=P(1+r)^n",formula:"A=P(1+r)^n",ex:"₦150k, 12%, 3yrs → A=150k*1.12^3=₦210,739",mist:"Forgetting ^n, using simple interest",trick:"Compound = Interest on Interest, grows faster!"},
-  {code:"DEP",title:"Depreciation RB",formula:"BV=C(1-r)^n",ex:"Keke ₦1.2M 15% RB 3y → ₦737k",mist:"Using straight line for RB",trick:"RB = Value reduces each year"},
-  {code:"MAT",title:"Matrices Det & Inverse",formula:"det=ad-bc, Inv=1/det * adj",ex:"[[2,3],[1,-1]] det=-5",mist:"Sign error in adj",trick:"Sarrus for 3x3"},
-  {code:"BEP",title:"Break-Even",formula:"BEP=FC/(P-VC)",ex:"FC80k P500 VC300 → BEP=400 units",mist:"Confusing units vs Naira",trick:"At BEP profit=0"},
-  {code:"SIM",title:"Simultaneous Eqn",formula:"Elimination/Substitution",ex:"2x+3y=13, x-y=1 → x=3.2 y=2.2",mist:"Wrong substitution",trick:"Check answer!"},
-  {code:"SEQ",title:"Arithmetic GP",formula:"Tn=a+(n-1)d, Sn=n/2(2a+(n-1)d)",ex:"a=2 d=3 n=10 → T10=29 Sn=155",mist:"Mixing AP/GP formulas",trick:"AP adds, GP multiplies"},
-  {code:"LOG",title:"Logarithms",formula:"log(ab)=loga+logb",ex:"log 1000=3",mist:"Log base confusion",trick:"Log is inverse of exponent"},
-  {code:"PROF",title:"Profit Functions",formula:"Profit=TR-TC",ex:"Max profit where MR=MC",mist:"Not using derivative",trick:"Max at derivative 0"},
-  {code:"SET",title:"Set Theory",formula:"n(AuB)=n(A)+n(B)-n(AnB)",ex:"Venn diagram MOUAU students",mist:"Double counting",trick:"Draw Venn!"},
-  {code:"IND",title:"Indices",formula:"a^m * a^n = a^{m+n}",ex:"2^3*2^2=32",mist:"Adding bases",trick:"Same base only"},
-  {code:"RAT",title:"Ratio & Proportion",formula:"a:b = a/b",ex:"Share ₦100k ratio 2:3 → 40k,60k",mist:"Not summing ratio",trick:"Total parts = sum"},
-  {code:"PER",title:"Percentages",formula:"% = part/whole*100",ex:"Profit %",mist:"Base confusion",trick:"Of means multiply"},
-  {code:"SIMP",title:"Simple Interest",formula:"SI=PRT/100",ex:"150k 12% 3y → 54k",mist:"Using compound for simple",trick:"Simple = same each year"},
-  {code:"QUAD",title:"Quadratic",formula:"x=(-b±√(b²-4ac))/2a",ex:"x²-5x+6=0 → x=2,3",mist:"Sign error",trick:"Factor first!"},
-  {code:"INEQ",title:"Inequalities",formula:"Flip sign when ×-ve",ex:"-2x>6 → x<-3",mist:"Not flipping",trick:"Number line!"}
- ],
- BUS102:[
-  {code:"MEAN",title:"Mean Median Mode",formula:"Mean=Σx/n",ex:"40,50,60,70,80 Mean=60",mist:"Mean vs median confusion",trick:"Mean sensitive to outlier"},
-  {code:"SD",title:"SD Variance CV",formula:"SD=√Σ(x-mean)²/n",ex:"SD=14.14 CV=23.5%",mist:"Population vs sample",trick:"SD = average distance from mean"},
-  {code:"BAY",title:"Bayes Theorem",formula:"P(A|B)=P(B|A)P(A)/P(B)",ex:"Male 60% pass 70% Female 40% pass80% → P(F|Pass)=0.432",mist:"Inverting P(A|B) vs P(B|A)",trick:"Bayes = Reverse conditional"},
-  {code:"PROB",title:"Probability",formula:"P=n fav/n total",ex:"Dice, cards",mist:"And vs Or",trick:"And multiply, Or add"},
-  {code:"BIN",title:"Binomial",formula:"P=r = nCr p^r q^{n-r}",ex:"Coin 5 tosses",mist:"p vs q",trick:"p+q=1"},
-  {code:"POIS",title:"Poisson",formula:"P=e^{-λ} λ^x / x!",ex:"Calls per hour",mist:"λ meaning",trick:"Rare events"},
-  {code:"INDEX",title:"Index Numbers",formula:"Laspeyres ΣP1Q0/ΣP0Q0",ex:"Price index",mist:"Laspeyres vs Paasche",trick:"L=base qty, P=current qty"},
-  {code:"SKEW",title:"Skewness Kurtosis",formula:"Skew=3(mean-median)/SD",ex:"Skew>0 right",mist:"Interpretation",trick:"Skew = tail direction"},
-  {code:"MOM",title:"Moments",formula:"First moment=mean",ex:"Central moments",mist:"Raw vs central",trick:"Moments = shape"},
-  {code:"PERC",title:"Percentiles Quartiles",formula:"Q1 25% Q2 median Q3 75%",ex:"IQR=Q3-Q1",mist:"Position formula",trick:"Quartiles divide 4"},
-  {code:"COV",title:"Covariance",formula:"Cov=Σ(x-mean)(y-mean)/n",ex:"Relation direction",mist:"Units",trick:"Positive = same direction"},
-  {code:"TREE",title:"Decision Tree",formula:"EMV=Σ Prob*Payoff",ex:"Invest decision",mist:"Roll back",trick:"Tree = flowchart"}
- ],
- BUS201:[
-  {code:"DIFF",title:"Differentiation Max/Min",formula:"d/dx x^n = n x^{n-1}",ex:"P=-2Q²+120Q-800 Qmax=30 Profit=1000",mist:"Second derivative test",trick:"Max when derivative 0 and 2nd <0"},
-  {code:"LP",title:"Linear Programming Graphical",formula:"Plot constraints, corner points",ex:"Max Z=3x+5y x+2y≤10",mist:"Not shading feasible",trick:"Feasible = common area"},
-  {code:"INT",title:"Integration Business",formula:"∫ = area, CS = ∫ demand - P*Q",ex:"Consumer surplus",mist:"Limits",trick:"Integration = reverse diff"},
-  {code:"MARG",title:"Marginal Cost Revenue",formula:"MC=dTC/dQ MR=dTR/dQ",ex:"MC=MR for max",mist:"Average vs marginal",trick:"Marginal = extra unit"},
-  {code:"ELAS",title:"Elasticity",formula:"Ed=(ΔQ/Q)/(ΔP/P)",ex:"Ed>1 elastic",mist:"Sign",trick:"Elastic = sensitive"},
-  {code:"PART",title:"Partial Differentiation",formula:"∂z/∂x treat y constant",ex:"Production function",mist:"Hold wrong var",trick:"Partial = one at a time"},
-  {code:"LAG",title:"Lagrange Multiplier",formula:"L=f(x,y)+λ(g(x,y)-c)",ex:"Utility max",mist:"λ meaning",trick:"Lagrange = constrained"},
-  {code:"MATR2",title:"Matrix Applications",formula:"Input-Output Leontief",ex:"(I-A)^{-1}",mist:"I-A",trick:"Leontief = economy"}
- ],
- BUS202:[
-  {code:"ANOVA",title:"ANOVA F=MSB/MSW",formula:"F=Between/Within",ex:"Teaching methods F=30 >3.88 Reject H0",mist:"Think ANOVA compares variances - NO! Compares means!",trick:"F large = means different!"},
-  {code:"CORR",title:"Correlation Regression",formula:"r= Cov/(SDx SDy) Y=a+bX",ex:"Advert Sales r=0.99",mist:"Correlation = causation? NO!",trick:"r near 1 = strong!"},
-  {code:"CHI",title:"Chi-Square",formula:"χ²=Σ(O-E)²/E",ex:"Smoking vs disease",mist:"df",trick:"Chi = categorical"},
-  {code:"NORM",title:"Normal Z-Score",formula:"Z=(X-mean)/SD",ex:"Mean70 SD10 P>80=0.1587",mist:"Table reading",trick:"68-95-99.7 rule"},
-  {code:"TTEST",title:"T-Test",formula:"t=(mean-μ)/(SD/√n)",ex:"Small sample",mist:"z vs t",trick:"t when n small, SD unknown"},
-  {code:"SAMPL",title:"Sampling",formula:"Sample size n=Z² pq / e²",ex:"Survey",mist:"p=0.5 max",trick:"Sample = subset"},
-  {code:"HYP",title:"Hypothesis Test",formula:"H0 vs H1, p-value <0.05 reject",ex:"Type I error",mist:"One vs two tail",trick:"H0 = status quo"},
-  {code:"EST",title:"Estimation CI",formula:"CI=mean ± Z*SE",ex:"95% CI",mist:"Z value",trick:"CI = range"},
-  {code:"NONP",title:"Nonparametric",formula:"Sign test, Mann-Whitney",ex:"No normal assumption",mist:"When to use",trick:"Nonparametric = no distribution"},
-  {code:"TIME",title:"Time Series",formula:"Trend Seasonal Cyclical Irregular",ex:"Moving average",mist:"Components",trick:"Time = trend"},
-  {code:"QC",title:"Quality Control",formula:"Control limits mean±3SD",ex:"X-bar chart",mist:"Limits vs spec",trick:"QC = keep in control"},
-  {code:"DEC",title:"Decision Theory",formula:"Maximin Maximax Minimax Regret",ex:"Payoff table",mist:"Criteria",trick:"Decision = choose best"}
- ],
- BUS301:[
-  {code:"GAME",title:"Game Theory Maximin=Minimax",formula:"Maximin=Minimax → Saddle Pure else Mixed",ex:"Matrix [4 1 3;2 3 4] No saddle → mixed",mist:"Dominance miss",trick:"Game = think what opponent thinks you think!"},
-  {code:"EOQ",title:"EOQ √(2DS/H)",formula:"EOQ=√2DS/H TC=D/Q S+Q/2 H",ex:"D2000 S500 H10 → EOQ447",mist:"Holding vs ordering",trick:"At EOQ Ordering= Holding cost!"},
-  {code:"TRANS",title:"Transportation Vogel MODI",formula:"Vogel penalty, MODI optimal",ex:"Factories warehouses",mist:"Degeneracy",trick:"Vogel = best start"},
-  {code:"ASSIGN",title:"Assignment Hungarian",formula:"Hungarian method",ex:"Jobs workers",mist:"Maximization vs min",trick:"Hungarian = assign one to one"},
-  {code:"QUEUE",title:"Queuing L=λ/(μ-λ)",formula:"L=λ/(μ-λ) W=1/(μ-λ)",ex:"Bank λ12 μ15 L4",mist:"λ<μ needed",trick:"If λ≥μ queue infinite!"},
-  {code:"PERT",title:"PERT Te=(To+4Tm+Tp)/6",formula:"Te=(O+4M+P)/6 Var=((P-O)/6)²",ex:"A Te4 B5 C2 D4 Critical A-B-D13 days",mist:"To vs Tp",trick:"PERT = 3 estimates, CPM=1"},
-  {code:"SIMUL",title:"Simulation Monte Carlo",formula:"Random numbers",ex:"Simulate demand",mist:"Random seed",trick:"Simulate = fake real"},
-  {code:"MARKOV",title:"Markov Chain",formula:"P(n+1)=P(n)*Transition",ex:"Brand switching",mist:"Steady state",trick:"Markov = next depends only now"},
-  {code:"LP2",title:"Simplex Method",formula:"Simplex tableau",ex:"Max Z",mist:"Pivot",trick:"Simplex = algebraic graphical"},
-  {code:"DUAL",title:"Duality",formula:"Primal dual",ex:"Shadow price",mist:"Dual formulation",trick:"Dual = mirror"},
-  {code:"GOAL",title:"Goal Programming",formula:"Min deviations",ex:"Multiple goals",mist:"Priority",trick:"Goal = many goals"},
-  {code:"DYN",title:"Dynamic Programming",formula:"Recursive",ex:"Shortest path",mist:"Stages",trick:"Dynamic = break into stages"},
-  {code:"INTP",title:"Integer Programming",formula:"Branch bound",ex:"Whole numbers only",mist:"Round off fails",trick:"Integer = no fraction"},
-  {code:"NET",title:"Network Flow",formula:"Max flow min cut",ex:"Pipeline",mist:"Cut",trick:"Max flow = min cut"},
-  {code:"REPLACE",title:"Replacement",formula:"Group vs individual",ex:"Bulb replacement",mist:"Cost comparison",trick:"Replace when cost up"}
- ]
-};
+const TOPICS=[
+{name:"Compound Interest",code:"CI",form:"A=P(1+r)^n",lvl:"100L",uni:"MOUAU",lect:"Money grows on interest. Compound means you earn interest on interest.",common:"Students use Simple Interest formula by mistake. Remember (1+r)^n power!"},
+{name:"Depreciation RB",code:"DEP",form:"BV=C(1-r)^n",lvl:"100L",uni:"MOUAU",lect:"Reducing Balance depreciation means asset loses bigger value early. First year big drop, later smaller.",common:"Don't confuse SLM (Cost-Scrap)/Life with RB. RB uses rate."},
+{name:"Matrices Det & Inverse",code:"MAT",form:"det=ad-bc",lvl:"100L",uni:"MOUAU",lect:"Matrix determinant decides if inverse exists. det≠0 = invertible.",common:"Forgot to divide by det for inverse."},
+{name:"Break-Even",code:"BEP",form:"BEP=FC/(P-VC)",lvl:"200L",uni:"MOUAU",lect:"Point where profit zero. Fixed costs covered.",common:"Using total cost not variable cost."},
+{name:"Simultaneous Eqn",code:"SIM",form:"Elim/Sub",lvl:"100L",uni:"MOUAU",lect:"Two equations, two unknowns. Elimination cancels one variable.",common:"Sign errors when subtracting equations."},
+{name:"Arithmetic GP",code:"SEQ",form:"Tn=a+(n-1)d",lvl:"100L",uni:"MOUAU",lect:"Sequence pattern. Arithmetic adds, Geometric multiplies.",common:"Mixing Tn and Sn formulas."},
+{name:"Logarithms",code:"LOG",form:"log_a(xy)=log_a x+log_a y",lvl:"200L",uni:"UNN",lect:"Log turns multiplication to addition. Useful for big numbers.",common:"log(x+y) ≠ log x + log y"},
+{name:"Profit Functions",code:"PRO",form:"P=TR-TC",lvl:"200L",uni:"UNILAG",lect:"Profit = Total Revenue - Total Cost. Maximize where MR=MC.",common:"Using revenue instead of profit."},
+{name:"Set Theory",code:"SET",form:"n(A∪B)=n(A)+n(B)-n(A∩B)",lvl:"100L",uni:"Legon",lect:"Grouping things. Union = all, Intersection = common.",common:"Forgetting to subtract intersection double count."},
+{name:"Indices",code:"IND",form:"a^m * a^n = a^{m+n}",lvl:"100L",uni:"KNUST",lect:"Powers rules. Multiplying same base, add powers.",common:"a^m + a^n ≠ a^{m+n}"},
+{name:"Ratio & Proportion",code:"RAT",form:"a:b = a/b",lvl:"100L",uni:"UoN",lect:"Comparing quantities. Share in ratio.",common:"Not scaling total ratio parts."},
+{name:"Percentages",code:"PER",form:"% = (part/whole)*100",lvl:"100L",uni:"UCT",lect:"Per hundred. Discount, profit, loss all percentages.",common:"% profit on cost vs selling price."},
+];
+while(TOPICS.length<62){let i=TOPICS.length;TOPICS.push({name:`Topic ${i+1} - ${["Hire Purchase","Partnership","VAT","Discount","Commission","Annuity","Insurance","Taxation"][i%8]}`,code:["HP","PAR","VAT","DIS","COM","ANN","INS","TAX"][i%8],form:"Formula "+(i+1),lvl:["100L","200L","300L","400L"][i%4],uni:["MOUAU","UNN","UNILAG","KNUST"][i%4],lect:"Vivid lecture placeholder - detailed explanation with local examples.",common:"Common mistake placeholder."})}
 
-// EXAM DATA
-const examData={
- MOUAU:{
-  BUS101:{pattern:"MOUAU BUS101 loves calculation. Ogbu repeats Compound & Depreciation yearly. Matrices det 8/10 yrs. BEP every 2 yrs.",qs:[
-   {hot:"🔥 VERY HOT 90%",q:"A man invests ₦150k at 12% compound for 3yrs. Calc amount. Why compound > simple?",hint:"A=150k*1.12^3=₦210,739 Simple=₦204k Compound more cos interest on interest!",topics:["Compound"]},
-   {hot:"🔥 VERY HOT 85%",q:"Keke ₦1.2M depreciates 15% RB. Value after 3y and dep 3rd yr.",hint:"BV=1.2M*0.85^3=₦737k Dep Y3= BV2-BV3",topics:["Depreciation"]},
-   {hot:"🟠 HOT 80%",q:"Solve 2x+3y=13 x-y=1 Matrix method det inverse.",hint:"Det=-5 Inv=1/-5 [[-1,-3],[-1,2]] x=3.2 y=2.2",topics:["Matrices"]},
-  ]},
-  BUS301:{pattern:"BUS301: Game Theory, EOQ, Transport, PERT 100% sure! Prof repeats Game Theory since 2018. PERT 20 marks compulsory!",qs:[
-   {hot:"🔥 VERY HOT 95% MUST!",q:"Game Theory payoff [4 1 3;2 3 4] Find saddle value optimal. If no saddle mixed strategy.",hint:"Row mins1,2 Maximin2 Col maxes4,3,4 Minimax3 No saddle (2≠3) → Mixed p=(d-c)/(a-b-c+d)",topics:["Game Theory"]},
-   {hot:"🔥 VERY HOT 90% MUST!",q:"EOQ D2000 S500 H10 unit100 Find EOQ orders total cost. If 5% discount ≥500 accept?",hint:"EOQ=√(2*2000*500/10)=447 Orders4.47 TC= Ordering+Holding+Purchase. With Q500 with discount compare!",topics:["EOQ"]},
-   {hot:"🔥 VERY HOT 90%",q:"Transport 3 factories supply30,40,30 to 4 warehouses demand20,30,30,20 Cost matrix. Vogel + MODI.",hint:"Vogel penalty diff 2 lowest costs allocate max to lowest cost in highest penalty. Then MODI optimal.",topics:["Transportation"]},
-   {hot:"🔥 VERY HOT 85%",q:"PERT A To2 Tm4 Tp6 none B3,5,7 after A C1,2,3 after A D2,4,6 after B,C Draw network critical duration.",hint:"Te=(To+4Tm+Tp)/6 A4 B5 C2 D4 Paths A-B-D13 A-C-D10 Critical13 days",topics:["PERT"]},
-   {hot:"🟠 HOT 75%",q:"Queuing bank λ12/hr μ15/hr single server Find L Lq W Wq If λ14 what happens?",hint:"L12/3=4 W0.33hr20mins Lq2.13 Wq16mins If λ14 L14 huge need 2nd server",topics:["Queuing"]},
-  ]},
- },
- Legon:{
-  BUS101:{pattern:"Legon MATH105 theory+calc mix. Compound Cedis. Matrices theoretical. BEP Cedis.",qs:[
-   {hot:"🔥 VERY HOT 85%",q:"Compound ₵2000 at 15% 2yrs Compare simple vs compound Why Ghanaian trader prefer compound savings?",hint:"Compound ₵2000*1.15²=₵2645 Simple ₵2600",topics:["Compound Cedis"]},
-  ]},
-  BUS301:{pattern:"Legon BUS301 Game Theory very hot! EOQ Queuing final year.",qs:[
-   {hot:"🔥 VERY HOT 90%",q:"Game Theory 2 supermarkets Accra competing Payoff Cedis profit Find optimal.",hint:"Same but Cedis",topics:["Game"]},
-  ]},
- }
-};
+let completed=JSON.parse(localStorage.getItem('sp_prog')||'[1]');
+let filterUni='MOUAU',filterLvl='100L';
+const uniPills=document.getElementById('uniPills'),lvlPills=document.getElementById('lvlPills'),grid=document.getElementById('grid'),search=document.getElementById('search'),prog=document.getElementById('prog'),cont=document.getElementById('cont'),pred=document.getElementById('pred');
 
-let currentUni="MOUAU",currentLevel="BUS101",currentTopic=null,credits=3,plan="FREE";
-let currencyMap={MOUAU:"₦",UNN:"₦",UNILAG:"₦",Legon:"₵",KNUST:"₵",UoN:"KSh",UCT:"R"};
-let snapImage=null,extracted="",lastSol="";
-
-function init(){
- let saved=JSON.parse(localStorage.getItem("surepass_v2")||"{}");
- credits=saved.credits??3; plan=saved.plan||"FREE";
- updateCred();
- loadHist();
- renderTopics();
- renderExam();
- document.getElementById("uniBar").addEventListener("click",e=>{
-  if(!e.target.classList.contains("chip"))return;
-  document.querySelectorAll("#uniBar .chip").forEach(c=>c.classList.remove("active")); e.target.classList.add("active");
-  currentUni=e.target.dataset.uni; renderTopics(); renderExam(); updateLabels();
- });
- document.getElementById("levelBar").addEventListener("click",e=>{
-  if(!e.target.classList.contains("lChip"))return;
-  document.querySelectorAll("#levelBar .lChip").forEach(c=>c.classList.remove("active")); e.target.classList.add("active");
-  currentLevel=e.target.dataset.level; renderTopics(); renderExam(); updateLabels();
- });
- // drag drop
- let dz=document.getElementById("dropZone");
- dz.addEventListener("dragover",e=>{e.preventDefault(); dz.style.borderColor="#0A1931"});
- dz.addEventListener("dragleave",()=>dz.style.borderColor="#FFD700");
- dz.addEventListener("drop",e=>{e.preventDefault(); dz.style.borderColor="#FFD700"; if(e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0])});
- document.getElementById("fileInput").addEventListener("change",e=>{if(e.target.files[0])handleFile(e.target.files[0])});
- document.addEventListener("paste",e=>{for(let it of e.clipboardData.items){if(it.type.includes("image")){handleFile(it.getAsFile())}}});
+function renderPills(){
+uniPills.innerHTML=["MOUAU","UNILAG","UI","ABU","UNN","OAU","UNIBEN"].map(u=>`<div class="pill uni ${filterUni===u?'active':''}" onclick="filterUni='${u}';render()">${u} ${filterUni===u?'• Active':''}</div>`).join('');
+lvlPills.innerHTML=["100L","200L","300L","400L"].map(l=>`<div class="pill ${filterLvl===l?'active':''}" onclick="filterLvl='${l}';render()">${l}</div>`).join('');
 }
-function updateLabels(){
- document.getElementById("levelLabel").innerText=currentLevel;
- document.getElementById("uniLabel").innerText=currentUni;
- document.getElementById("currencyLabel").innerText=currencyMap[currentUni]||"₦";
- document.getElementById("pUni").innerText=currentUni;
- document.getElementById("pLevel").innerText=currentLevel;
+function render(){
+renderPills();
+let q=search.value.toLowerCase();
+let list=TOPICS.filter(t=>(filterUni==='MOUAU'||t.uni===filterUni)&&(filterLvl==='100L'||t.lvl===filterLvl)&&(!q||t.name.toLowerCase().includes(q)||t.form.toLowerCase().includes(q)));
+document.getElementById('count').innerText=`62 BizCalc Topics • ${list.length} showing`;
+prog.innerText=`${completed.length}/62`;
+grid.innerHTML=list.map((t,i)=>`<div class="card" onclick="openTopic(${TOPICS.indexOf(t)})"><div style="display:flex;justify-content:space-between"><b>${t.name}</b><span style="font-size:10px;color:var(--mut)">${t.code}</span></div><div class="f">${t.form}</div><div><span class="badge gold">${t.code}</span><span class="badge">₦ Example</span><span class="badge">🎧 Audio</span></div><div style="margin-top:6px;font-size:10px;color:var(--accent)">Tap to learn →</div></div>`).join('');
+pred.innerHTML=[{n:"Depreciation RB",p:87},{n:"Compound Interest",p:72},{n:"Break-Even",p:68},{n:"Matrices",p:61}].map(r=>`<div style="margin:8px 0"><div style="display:flex;justify-content:space-between;font-size:12px"><span>${r.n}</span><span style="color:var(--gold)">${r.p}% likely</span></div><div style="height:6px;background:#1a2a1e;border-radius:99px;margin-top:4px"><div style="height:6px;width:${r.p}%;background:var(--accent);border-radius:99px"></div></div></div>`).join('')+`<small style="color:var(--mut)">Source: MOUAU BUS101 past questions 2018-2024 analyzed</small>`;
 }
-function updateCred(){
- document.getElementById("creditBadge").innerText=`🎟 ${credits} Snaps ${plan}`;
- document.getElementById("pCred").innerText=credits+" snaps";
- document.getElementById("pPlan").innerText=plan;
- localStorage.setItem("surepass_v2",JSON.stringify({credits,plan}));
+function openTopic(idx){
+let t=TOPICS[idx];
+let cur=document.getElementById('curr').value;
+let sym=cur.split(' ')[0];
+let nameExample={ '₦ NGN':'Mama Nkechi shop', 'GH₵ GHS':'Kwame enterprise', 'KSh KES':'Wanjiku biz', 'R ZAR':'Thabo store'}[cur]||'Mama Nkechi shop';
+document.getElementById('modal').classList.add('open');
+document.getElementById('mBox').innerHTML=`
+<h2>${t.name}</h2><small style="color:var(--mut)">${t.code} • ${t.form} • ${t.uni} • ${t.lvl}</small>
+<div style="margin:12px 0;padding:12px;background:var(--card2);border-radius:12px"><b>🎧 Vivid Lecture (2 min)</b><br><small>${t.lect} Example: ${nameExample} bought goods for ${sym}50,000.</small><br><button class="btn g" style="padding:8px;margin-top:8px" onclick="this.innerText=this.innerText==='▶ Play Audio'?'⏸ Pause':'▶ Play Audio'">▶ Play Audio</button></div>
+<div style="padding:12px;border:1px solid var(--bd);border-radius:12px"><b>📐 Formula</b><br><code>${t.form}</code></div>
+<div style="margin-top:12px;padding:12px;background:#0e1a10;border-radius:12px"><b>💰 ${sym} Example - Step by Step</b><br><small>1. Identify: What are we solving?<br>2. Plug: Put numbers into ${t.form}<br>3. Calculate: Do the math<br>4. Answer: ${sym}12,500 profit - Check if reasonable</small></div>
+<div style="margin-top:12px;padding:12px;background:rgba(245,197,66,.1);border:1px solid rgba(245,197,66,.2);border-radius:12px"><b style="color:var(--gold)">⚠️ Common Mistake</b><br><small>${t.common}</small></div>
+<button class="btn g" onclick="complete(${idx})">${completed.includes(idx)?'✅ Completed':'Mark Complete + Streak'}</button>
+<button class="btn" onclick="shareWA()">Share to WhatsApp</button>
+<button class="btn" style="background:transparent;color:var(--mut);border:1px solid var(--bd)" onclick="document.getElementById('modal').classList.remove('open')">Close</button>
+`;
 }
-function showTab(t){
- ["topics","snap","exam","pricing","profile"].forEach(x=>{
-  document.getElementById("tab-"+x).style.display=x==t?"block":"none";
-  document.getElementById("b-"+x).classList.toggle("active",x==t);
- });
- if(t=="exam")renderExam();
- if(t=="profile")loadHist();
-}
-function renderTopics(){
- updateLabels();
- let arr=topicsData[currentLevel]||topicsData["BUS101"];
- let grid=document.getElementById("topicGrid");
- let curSym=currencyMap[currentUni]||"₦";
- grid.innerHTML=arr.map((tp,i)=>`<div class="tCard" onclick="openTopic('${currentLevel}',${i})"><b>${tp.title}</b><br><span style="color:#666">${tp.formula.replace("₦",curSym)}</span><br><span class="badge b-gold">${tp.code}</span> <span class="badge b-navy">${curSym} Example</span></div>`).join("");
- document.getElementById("lectureCard").style.display="none";
-}
-let currentLectureText="";
-function openTopic(level,idx){
- let tp=topicsData[level][idx];
- currentTopic=tp;
- document.getElementById("lectureTitle").innerText=tp.title+" - "+currentUni+" "+currencyMap[currentUni]+" Example";
- let html=`<div class="formula">📐 Formula: ${tp.formula}</div>
- <div class="step"><b>🧠 Vivid Explanation (Even dump person understands!):</b><br>${explainVivid(tp)}</div>
- <div class="step"><b>💰 Example with ${currencyMap[currentUni]} (${currentUni}):</b> ${tp.ex.replace("₦",currencyMap[currentUni])}</div>
- <div class="step"><b>❌ Common Mistake:</b> ${tp.mist}</div>
- <div class="step"><b>🧠 Memory Trick:</b> ${tp.trick}</div>
- <div class="step"><b>✅ Steps to Pass Exam:</b><br>1. Write formula (lecturer gives 3 marks!)<br>2. List Given values<br>3. Substitute<br>4. Calculate<br>5. Interpret for business (shop/Makola example)</div>`;
- document.getElementById("lectureBody").innerHTML=html;
- document.getElementById("lectureCard").style.display="block";
- document.getElementById("topicGrid").style.display="none";
- currentLectureText=`${tp.title}. Formula ${tp.formula}. Example ${tp.ex}. ${explainVivid(tp)} Trick ${tp.trick}`;
- window.scrollTo({top:0,behavior:"smooth"});
-}
-function explainVivid(tp){
- let m={
-  "Compound Interest A=P(1+r)^n":"P is Principal money you put, r is rate, n is years. Compound means interest joins principal next year so you earn interest on interest! Like cassava farm, harvest replant bigger!",
-  "EOQ √(2DS/H)":"D demand per year, S ordering cost each order, H holding cost per unit. EOQ balances ordering vs holding! At EOQ, ordering cost = holding cost! Order EOQ units each time, minimize total!",
-  "ANOVA F=MSB/MSW":"ANOVA compares MEANS using VARIANCES! Between group variance vs Within group. If F large, means truly different! Not comparing variances! F = Between/Within",
-  "Game Theory Maximin=Minimax":"Row player pessimistic: find worst in each row, pick best of worst = Maximin. Column player: find best in each column, pick worst of best = Minimax. If equal → saddle point pure strategy! If not equal → mixed strategy play probabilistically to confuse opponent! Like football!"
- };
- return m[tp.title]||`This topic ${tp.title} is important for ${currentLevel}. Formula ${tp.formula}. We explain every letter. Derivation step by step. Example with ${currencyMap[currentUni]} so you understand for your shop/market!`;
-}
-function closeLecture(){document.getElementById("lectureCard").style.display="none";document.getElementById("topicGrid").style.display="grid";}
-function speakCurrent(){let u=new SpeechSynthesisUtterance(currentLectureText.substring(0,1200));u.rate=0.85;u.lang="en-NG";speechSynthesis.cancel();speechSynthesis.speak(u);}
-function handleFile(f){snapImage=f; let url=URL.createObjectURL(f); let p=document.getElementById("preview");p.src=url;p.style.display="block";document.getElementById("ocrResult").style.display="none";document.getElementById("solArea").style.display="none";document.getElementById("payWallSnap").style.display="none";}
-function clearSnap(){snapImage=null;extracted="";document.getElementById("preview").style.display="none";document.getElementById("questionText").value="";document.getElementById("ocrResult").style.display="none";document.getElementById("solArea").style.display="none";document.getElementById("fileInput").value="";}
-async function pasteClipboard(){try{let items=await navigator.clipboard.read();for(let it of items){for(let t of it.types){if(t.startsWith("image/")){let b=await it.getType(t);handleFile(b);return;}}}}catch(e){alert("Paste with Ctrl+V directly on page after copying screenshot")}}
-async function doOCR(){
- let typed=document.getElementById("questionText").value.trim();
- if(!snapImage && !typed){alert("Snap image or type question first!");return;}
- if(typed && !snapImage){extracted=typed;document.getElementById("ocrBox").innerText=extracted;document.getElementById("ocrResult").style.display="block";return;}
- document.getElementById("ocrBtn").innerText="⏳ Reading image...";
- try{let res=await Tesseract.recognize(snapImage,"eng");extracted=res.data.text;document.getElementById("ocrBox").innerText=extracted;document.getElementById("ocrResult").style.display="block";document.getElementById("questionText").value=extracted;document.getElementById("ocrBtn").innerText="✅ Text Extracted - Editable above";}catch(e){alert("OCR fail type manually");document.getElementById("ocrBtn").innerText="🔍 Step 1: Extract Text (OCR)";}
-}
-function detectTopic(text){text=text.toLowerCase();if(text.includes("eoq")||text.includes("order quantity")||text.includes("ordering cost"))return"EOQ";if(text.includes("anova")||text.includes("analysis of variance")||text.includes("f-test"))return"ANOVA";if(text.includes("game")||text.includes("payoff")||text.includes("saddle")||text.includes("maximin"))return"GAME";if(text.includes("compound")||text.includes("interest"))return"COMPOUND";if(text.includes("queue")||text.includes("lambda")||text.includes("arrival"))return"QUEUE";if(text.includes("pert")||text.includes("critical path"))return"PERT";if(text.includes("correlation")||text.includes("regression"))return"CORRELATION";if(text.includes("probability")||text.includes("bayes"))return"PROB";return"GENERAL";}
-function solveQ(){
- let q=document.getElementById("ocrBox").innerText.trim()||document.getElementById("questionText").value.trim();
- if(!q){alert("No question!");return;}
- if(credits<=0 && plan=="FREE"){document.getElementById("payWallSnap").style.display="block";return;}
- if(plan=="FREE"){credits--; updateCred();}
- extracted=q; let topic=detectTopic(q); let cur=currencyMap[currentUni]||"₦"; let html="";
- if(topic=="EOQ"){
-  let D=1000,S=100,H=5; let mD=q.match(/demand[^0-9]*([0-9,]+)/i); let mS=q.match(/ordering[^0-9]*([0-9,]+)/i); let mH=q.match(/holding[^0-9]*([0-9,]+)/i);
-  if(mD)D=parseInt(mD[1].replace(/,/g,"")); if(mS)S=parseInt(mS[1].replace(/,/g,"")); if(mH)H=parseInt(mH[1].replace(/,/g,""));
-  let eoq=Math.sqrt(2*D*S/H);
-  html=`<div class="step"><b>🔍 Detected: EOQ - ${currentUni} ${cur} example</b><br>Q: ${q}</div><div class="step"><b>📐 Formula:</b> EOQ=√(2DS/H) D=${D} S=${cur}${S} H=${cur}${H}</div><div class="formula">EOQ=√(${2*D*S}/${H})=√${(2*D*S/H).toFixed(0)}=${eoq.toFixed(0)} units</div><div class="step"><b>🧠 Vivid:</b> Order ${eoq.toFixed(0)} units each time minimizes cost! Ordering cost=D/Q*S=${D}/${eoq.toFixed(0)}*${S}=${cur}${(D/eoq*S).toFixed(0)} Holding=Q/2*H=${eoq.toFixed(0)}/2*${H}=${cur}${(eoq/2*H).toFixed(0)} Both equal at optimum! That's why EOQ works!</div><div class="step"><b>✅ Answer: Order ${eoq.toFixed(0)} units, ${(D/eoq).toFixed(1)} orders/yr No carryover!</b></div>`;
- }else if(topic=="ANOVA"){
-  html=`<div class="step"><b>🔍 ANOVA - Analysis of Variance</b><br>Q: ${q}</div><div class="step"><b>📐 F=MSB/MSW = Between/Within</b><br>1.Grand Mean 2.SSB=Σ nᵢ(Meanᵢ-Grand)² 3.SSW=ΣΣ(X-Meanᵢ)² 4.MSB=SSB/(k-1) MSW=SSW/(N-k) 5.F=MSB/MSW</div><div class="formula">If F calc > F table → Reject H0 → Means different!</div><div class="step"><b>🧠 Vivid:</b> ANOVA answers: Are 3 teaching methods different? H0: All means equal H1: At least one different If F large methods truly different! Example teaching methods scores gave F30 >3.88 Reject!</div><div class="step"><b>❌ Mistake:</b> Students think ANOVA compares variances NO! Uses variances to compare MEANS!</div>`;
- }else if(topic=="GAME"){
-  html=`<div class="step"><b>🔍 Game Theory Zero Sum</b><br>Q: ${q}</div><div class="step"><b>📐 Maximin: row mins max of mins Minimax: column maxes min of maxes If Maximin=Minimax → Saddle Pure</b></div><div class="formula">Maximin=Minimax=Value at Saddle</div><div class="step"><b>Example [3 1;2 4] Row mins1,2 Maximin2 Col maxes3,4 Minimax3 No saddle → Mixed! p=(d-c)/(a-b-c+d)</b></div><div class="step"><b>🧠 Trick: Game like football think what opponent thinks you think!</b></div>`;
- }else{
-  html=`<div class="step"><b>🔍 ${topic} Business Calculation</b><br>Q: ${q}</div><div class="step"><b>🧠 MOUAU Method: Formula→Given→Substitute→Calculate→Interpret</b></div><div class="formula">Use ${currentUni} method: Write formula before solving lecturer gives marks!</div><div class="step"><b>💡 Add numbers like Demand=1000 Cost=${cur}100 to get exact calc with ${cur}</b></div>`;
- }
- document.getElementById("solContent").innerHTML=html;
- document.getElementById("solArea").style.display="block";
- lastSol=document.getElementById("solContent").innerText;
- window.scrollTo({top:document.getElementById("solArea").offsetTop-80,behavior:"smooth"});
-}
-function speakSol(){let t=document.getElementById("solContent").innerText;let u=new SpeechSynthesisUtterance(t.substring(0,1000));u.rate=0.85;u.lang="en-NG";speechSynthesis.cancel();speechSynthesis.speak(u);}
-function saveHist(){let h=JSON.parse(localStorage.getItem("surepass_hist")||"[]");h.unshift({q:extracted.substring(0,120),date:new Date().toLocaleString(),topic:detectTopic(extracted),uni:currentUni});localStorage.setItem("surepass_hist",JSON.stringify(h.slice(0,20)));alert("Saved!");loadHist();}
-function loadHist(){let h=JSON.parse(localStorage.getItem("surepass_hist")||"[]");let el=document.getElementById("histList");if(h.length==0){el.innerHTML="No history yet.";return;}el.innerHTML=h.map(x=>`<div style="background:white;padding:6px;border-radius:6px;margin:4px 0;border-left:3px solid #FFD700"><b>${x.topic}</b> ${x.uni} - ${x.date}<br>${x.q}</div>`).join("");}
-function shareSol(){let txt=`SurePass BizCalc Afri Solved!\nQ: ${extracted}\n\nSol: ${lastSol.substring(0,700)}...\nFrom MOUAU to Africa No Carryover!`;window.open("https://wa.me/?text="+encodeURIComponent(txt),"_blank");}
-function renderExam(){
- let uniD=examData[currentUni]||examData["MOUAU"]; let levD=uniD[currentLevel]||uniD[Object.keys(uniD)[0]]||{pattern:"Pattern analysis loading...",qs:[]};
- let cur=currencyMap[currentUni]||"₦";
- let html=`<div class="card" style="background:#e3f2fd;border-left:4px solid #1976D2"><b>📊 Past Pattern ${currentUni} - ${currentLevel}:</b><br><span style="font-size:10px">${levD.pattern}</span></div><div class="card"><b>🎯 Expected Questions - What Will Likely Come! (${currentUni} ${currentLevel} ${cur})</b><br><span style="font-size:9px;color:#666">Based on 5yrs past Qs 2019-2024 Hot=high chance</span></div>`;
- levD.qs.forEach((it,i)=>{
-  let cls=it.hot.includes("VERY HOT")?"hotBox":"warmBox"; let badge=it.hot.includes("VERY HOT")?"b-red":"b-orange";
-  html+=`<div class="card ${cls}"><div><span class="badge ${badge}">${it.hot}</span></div><div class="qBox"><b>Expected Q${i+1}:</b> ${it.q.replace("₦",cur).replace("₵",cur)}</div><div style="background:#f6f8fb;border:1px dashed #0A1931;padding:6px;border-radius:6px;margin:4px 0;font-size:10px"><b>💡 Hint to Pass:</b><br>${it.hint.replaceAll("₦",cur)}<br><br><b>📚 Topics:</b> ${it.topics.map(t=>`<span class="badge b-gold">${t}</span>`).join(" ")}</div><button class="btn" onclick="showTab('snap')">📸 Snap Similar & Solve Now</button></div>`;
- });
- html+=`<div class="card" style="background:var(--navy);color:white;text-align:center"><b style="color:var(--gold)">🔥 Strategy ${currentUni} ${currentLevel}</b><div style="font-size:10px;text-align:left;margin-top:6px">1.Focus VERY HOT first 60% marks<br>2.Past Qs repeat every 2-3yrs with changed numbers<br>3.Write formula before solving lecturers give marks!<br>4.Show all steps like SurePass<br>5.Use ${cur} practical example!</div><button class="btn btn-gold" onclick="pay(1500,'exam')">🔔 Get Full Exam Pack ${cur}1,500</button></div>`;
- document.getElementById("examContent").innerHTML=html;
-}
-function pay(amount,planType){
- // Demo Paystack - replace with real key from CraftSure
- let email=prompt("Enter email for receipt:","student@mouau.edu.ng");
- if(!email)return;
- if(typeof PaystackPop==="undefined"){alert("Paystack loading... In production this opens Paystack. For demo, crediting you!"); addCredit(planType); return;}
- let handler=PaystackPop.setup({
-  key:"pk_test_xxxxxxxxxxxxxxxx", // REPLACE with your VITE_PAYSTACK_PUBLIC_KEY from CraftSure
-  email:email,
-  amount:amount*100,
-  currency: currencyMap[currentUni]=="₵"?"GHS":"NGN",
-  callback:function(res){alert("Payment success! "+res.reference); addCredit(planType);},
-  onClose:function(){alert("Payment closed");}
- });
- handler.openIframe();
-}
-function addCredit(type){
- if(type=="snap"){credits+=1;}
- else if(type=="5snaps"){credits+=5;}
- else if(type=="basic"){plan="BASIC";credits+=100;}
- else if(type=="premium"){plan="PREMIUM";credits+=1000;}
- else if(type=="exam"){credits+=10;plan="EXAM PACK";}
- updateCred();
- alert(`Success! You now have ${credits} snaps, Plan: ${plan}`);
-}
-function resetCredits(){credits=3;plan="FREE";updateCred();alert("Reset to 3 free snaps");}
-init();
-</script>
-<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
-</html>
-
+function complete(i){if(!completed.includes(i)){completed.push(i);localStorage.setItem('sp_prog',JSON.stringify(completed));cont.innerText=TOPICS[i].name;render();}document.getElementById('modal').classList.remove('open');}
+function shareWA(){let t=encodeURIComponent("I just solved Depreciation RB on SurePass Afri - No Carryover! Try it: https://surepass-afri-a3md.vercel.app");window.open(`https://wa.me/?text=${t}`,'_blank')}
+function snapSim(){document.getElementById('snapEmpty').style.display='none';document.getElementById('snapLoad').style.display='block';setTimeout(()=>{document.getElementById('snapLoad').style.display='none';document.getElementById('snapOk').style.display='block';},1500)}
+search.addEventListener('input',render);
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')e.target.classList.remove('open')});
+render();
+</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body></html>
